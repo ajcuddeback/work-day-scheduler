@@ -1,16 +1,18 @@
-$(".task-input").on("click", function() {
-    var text = $(".taskEl").text().trim();
+var tasks = [];
 
-    var textInput = $("<textarea>").addClass("form-control").val(text);
+var saveTasks = function() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
-    $(".taskEl").replaceWith(textInput);
-    textInput.trigger("focus")
-});
 
 $(".saveBtn").on("click", function() {
-    var text = $(".form-control").val().trim();
+    var taskInput = $("#taskInput").val().trim();
 
-    var taskDiv = $("<p>").addClass("taskEl").text(text);
+    var status = $(".task-input").attr("id").replace("task-", "")
 
-    $(".form-control").replaceWith(taskDiv)
+    
+
+    tasks.push(taskInput)
+
+    saveTasks();
 });
