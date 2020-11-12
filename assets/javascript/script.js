@@ -59,17 +59,17 @@ var currentDay = moment();
 
 currentDayP.text(currentDay.format("MMMM Do YYYY"));
 
-var currentTime = moment().hour();
+var currentTime = moment().set("hour", 13).hour();
 
 var dueTimeStyle = function() {
 
     $(".taskInput").each(function() {
-        if($(this).attr("id") === currentTime) {
-            $(this).addClass("present")
-        } else if($(this).attr("id") < currentTime) {
+         if($(this).attr("id") < currentTime) {
             $(this).addClass("past")
         } else if($(this).attr("id") > currentTime) {
             $(this).addClass("future")
+        } else {
+            $(this).addClass("present")
         }
     });
 };
@@ -78,7 +78,7 @@ var timeReset = function() {
     localStorage.clear();
 }
 
-if (currentTime > 5) {
+if (currentTime > 17) {
     timeReset()
 }
 

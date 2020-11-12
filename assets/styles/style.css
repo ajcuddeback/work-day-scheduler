@@ -2,6 +2,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
+    background-color: #222831;
+    font-family: 'Playfair Display', serif;
   }
   
   textarea{
@@ -18,9 +20,9 @@ body {
   .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color:white;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 3px solid #E8E8E8;
   }
   
   .description{
@@ -41,14 +43,14 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;
+    /* border-top: 1px solid white; */
     /* margin: 0; */
   }
   
   .hour {
-    background-color: #ffffff;
+    background-color: #E8E8E8;
     color: #000000;
-    border-top: 1px dashed #000000;
+    border-top: 1px solid #000000;
     padding-top: 7px;
     text-align: end;
   }
@@ -58,7 +60,7 @@ body {
   
   .past {
     background-color: #d3d3d3;
-    color: white;
+    color: #222831;
   }
   
   .present {
@@ -68,14 +70,14 @@ body {
   
   .future {
     background-color: #77dd77;
-    color: white;
+    color: #222834;
   }
   
   .saveBtn {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    background-color: #30475E;
     color: white;
   }
   
