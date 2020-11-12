@@ -78,7 +78,7 @@ var timeReset = function() {
     localStorage.clear();
 }
 
-if (currentTime > 17) {
+if (currentTime > 23) {
     timeReset()
 }
 
@@ -86,6 +86,8 @@ dueTimeStyle()
 loadTasks()
 
 setInterval(dueTimeStyle, (1000 * 60) * 10);
+var whatever = document.getElementById("#9")
+console.log(whatever)
 
 
 
