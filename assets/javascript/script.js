@@ -17,10 +17,15 @@ $(".saveBtn").on("click", function() {
     saveTasks();
 });
 
-var m = moment();
 
-var currentTime = moment().second();
+var currentDayP = $("#currentDay");
+var currentDay = moment();
 
+currentDayP.text(currentDay.format("MMMM Do YYYY"));
+
+console.log(currentDay)
+
+var currentTime = moment().hour();
 
 var dueTimeStyle = function() {
 
@@ -39,7 +44,7 @@ dueTimeStyle()
 
 setInterval(function() {
         dueTimeStyle()
-}, 1000);
+}, (1000 * 60) * 10);
 
 
 
