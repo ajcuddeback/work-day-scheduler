@@ -1,5 +1,8 @@
 var tasks = [];
 
+
+
+
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
@@ -42,9 +45,7 @@ var dueTimeStyle = function() {
 };
 dueTimeStyle()
 
-setInterval(function() {
-        dueTimeStyle()
-}, (1000 * 60) * 10);
+setInterval(dueTimeStyle, (1000 * 60) * 10);
 
 
 
