@@ -59,7 +59,7 @@ var currentDay = moment();
 
 currentDayP.text(currentDay.format("MMMM Do YYYY"));
 
-var currentTime = moment().set("hour", 13).hour();
+var currentTime = moment().hour();
 
 var dueTimeStyle = function() {
 
