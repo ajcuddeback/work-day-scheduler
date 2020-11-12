@@ -73,6 +73,15 @@ var dueTimeStyle = function() {
         }
     });
 };
+
+var timeReset = function() {
+    localStorage.clear();
+}
+
+if (currentTime > 5) {
+    timeReset()
+}
+
 dueTimeStyle()
 loadTasks()
 
