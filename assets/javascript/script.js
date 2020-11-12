@@ -16,3 +16,30 @@ $(".saveBtn").on("click", function() {
 
     saveTasks();
 });
+
+var m = moment();
+
+var currentTime = moment().second();
+
+
+var dueTimeStyle = function() {
+
+    $(".taskInput").each(function() {
+        if($(this).attr("id") === currentTime) {
+            $(this).addClass("present")
+        } else if($(this).attr("id") < currentTime) {
+            $(this).addClass("past")
+        } else if($(this).attr("id") > currentTime) {
+            $(this).addClass("future")
+        }
+    });
+    console.log(moment().second())
+};
+dueTimeStyle()
+
+setInterval(function() {
+        dueTimeStyle()
+}, 1000);
+
+
+
