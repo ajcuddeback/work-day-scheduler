@@ -74,6 +74,9 @@ var dueTimeStyle = function() {
     });
 };
 
+setInterval(dueTimeStyle, (1000 * 60) * 10);
+
+
 var timeReset = function() {
     localStorage.clear();
 }
@@ -85,9 +88,6 @@ if (currentTime > 23) {
 dueTimeStyle()
 loadTasks()
 
-setInterval(dueTimeStyle, (1000 * 60) * 10);
-var whatever = document.getElementById("#9")
-console.log(whatever)
 
 
 
